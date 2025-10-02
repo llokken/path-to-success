@@ -1,0 +1,402 @@
+/* CSS BY Lucas Lokken */
+
+
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ROOT VARIABLES */
+:root {
+    --teal: #4CA7C0;
+    --purple: #484FB7;
+    --lavender: #6B8FE7;
+    --yellow: #E9BB57;
+    --pink: #D9526F;
+    --dark-gray: #1E1E1E;
+    --white: #ffffff;
+
+    --font: 'Inter', Arial, sans-serif;
+    --header-font: 'Kavoon', Helvetica, sans-serif;
+}
+
+
+/* GLOBAL STYLES (mobile first/small) */
+
+body {
+    font-family: var(--font);
+    background-color: var(--lavender);
+}
+
+h1,
+h2 {
+    font-family: var(--header-font);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+nav h2 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.15em;
+}
+
+header, main, footer {
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+header {
+    background-color: var(--purple);
+    text-align: center;
+    color: var(--white); 
+}
+
+header h1 {
+    padding-top: .5em;
+}
+
+header p {
+    padding-top: 1em;
+    padding-bottom: 2.5em;
+    font-style: italic;
+}
+
+nav {
+    background-color: var(--yellow);
+    padding: .35em;
+}
+
+nav h2 {
+    font-family: var(--fonts);
+    font-style: italic;
+    font-weight: 900;
+    color: black;
+    margin-top: .25em;
+}
+
+nav li {
+    background-color: var(--white);
+    margin: .75em;
+    padding: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--purple);
+}
+
+main {
+    background-color: var(--purple);
+}
+
+section {
+    padding: 1em;
+}
+
+section:nth-child(even) {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+section h2{
+    color: var(--white);
+}
+
+section ul {
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+section li {
+    padding: 2rem;
+    text-align: center;
+    border-radius: .75em;
+    font-weight: 900;
+    font-size: 1.05em;
+    color: var(--dark-gray)
+    
+}
+
+section li:nth-child(1) { 
+    background-color: var(--teal);
+}
+section li:nth-child(2) { 
+    background-color: var(--lavender);
+    margin-top: 0;
+}
+
+section li:nth-child(3) { 
+    background-color: var(--yellow);
+}
+
+section li:nth-child(4) { 
+    background-color: var(--white);
+}
+
+section p {
+    margin-top: .5em;
+    line-height: 1.5em;
+    color: var(--dark-gray);
+}
+
+section:last-child p {
+    margin-top: .5em;
+    line-height: 1.5em;
+    color: var(--white);
+}
+
+section a {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: .75em;
+    margin-left: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    padding-left: 7.5em;
+    width: 60%;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    box-shadow: 4px 6px 4px var(--dark-gray);
+    border-radius: 1em;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+article {
+    border-radius: 1em;
+
+}
+
+article h3 {
+    color: var(--yellow);
+    font-weight: 800;
+    margin-top: .25em;
+    margin-bottom: .25em;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: .75em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+div h4 {
+    order: 2;
+    padding: .75em;
+    padding-bottom: 0;
+    color:var(--purple);
+    font-weight: 800;
+}
+
+div img {
+    order: 1;
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+
+div p {
+    order: 3;
+    padding: 1em;
+    padding-top: 0;
+    font-weight:500;
+    line-height: 1.25em;
+}
+
+table {
+    background-color: var(--yellow);
+    margin: 0em auto; 
+    margin-top: .5em;
+    color: var(--dark-gray);
+}
+
+th {
+    padding: 1em;
+    font-weight: 900;
+}
+
+td {
+    background-color: var(--white);
+    padding: 1em;
+    border: 2px solid var(--yellow);
+    font-weight: 600;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--purple);
+    color: var(--white);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+    text-align: center;
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
+    font-size: .75em;
+    font-weight: 500;
+}
+
+footer a {
+    color: var(--white);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+
